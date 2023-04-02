@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#93dfd5"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="242dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        tools:context=".applForAll">
+
+        <Spinner
+            android:id="@+id/applSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/border"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.254"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tvnumofappl"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/border"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="55dp"
+            android:paddingBottom="10dp"
+            android:text="Enter no. of appliances :"
+            android:textAlignment="viewStart"
+            android:textColor="#8a2be2"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/applSpinner" />
+
+        <EditText
+            android:id="@+id/numofappl"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp"
+            android:text="1"
+            android:textAlignment="textStart"
+            android:textColor="#8a2be2"
+            android:textColorHint="#3E1010"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvnumofappl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvnumofappl"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tvnumofhours"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/border"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="55dp"
+            android:paddingBottom="10dp"
+            android:text="Enter hours of use /day :"
+            android:textAlignment="viewStart"
+            android:textColor="#8a2be2"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvnumofappl" />
+
+        <EditText
+            android:id="@+id/numofHours"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp"
+            android:text="1"
+            android:textAlignment="textStart"
+            android:textColor="#8a2be2"
+            android:textColorHint="#3E1010"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvnumofhours"
+            app:layout_constraintEnd_toEndOf="@+id/tvnumofhours"
+            app:layout_constraintTop_toTopOf="@+id/tvnumofhours"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tvnumofhours2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/border"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="55dp"
+            android:paddingBottom="10dp"
+            android:text="Power usage in Watts :"
+            android:textAlignment="viewStart"
+            android:textColor="#8a2be2"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvnumofhours" />
+
+        <EditText
+            android:id="@+id/powerUsage"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp"
+            android:textAlignment="textStart"
+            android:textColor="#8a2be2"
+            android:textColorHint="#3E1010"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvnumofhours2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tvUnitCost"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/border"
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingRight="55dp"
+            android:paddingBottom="10dp"
+            android:textAlignment="viewStart"
+            android:textColor="#8a2be2"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/kwhCost"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvnumofhours2" />
+
+        <EditText
+            android:id="@+id/kwhCost"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp"
+            android:textAlignment="textStart"
+            android:textColor="#8a2be2"
+            android:textColorHint="#3E1010"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvUnitCost"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvUnitCost"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/updatedbg"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/tvperday"
+            app:layout_constraintTop_toBottomOf="@+id/tvUnitCost"
+            tools:layout_editor_absoluteX="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_compute3"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/comp_border"
+                    android:gravity="center|center_vertical"
+                    android:hapticFeedbackEnabled="false"
+                    android:onClick="computeNow"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:text="Compute"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    app:cornerRadius="4dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_clear2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="51dp"
+                    android:layout_gravity="left|end"
+                    android:layout_marginStart="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:gravity="center"
+                    android:hapticFeedbackEnabled="false"
+                    android:onClick="back"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:text="Back"
+                    android:textColor="#020000"
+                    android:textSize="20dp"
+                    app:cornerRadius="4dp" />
+
+                <Button
+                    android:id="@+id/btn_compute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="51dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/add_border"
+                    android:gravity="center"
+                    android:hapticFeedbackEnabled="false"
+                    android:onClick="addCost"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:text="ADD"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:visibility="invisible"
+                    app:cornerRadius="4dp" />
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="51dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/back_border"
+                    android:gravity="center"
+                    android:hapticFeedbackEnabled="false"
+                    android:onClick="clearit"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:text="Clear"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    app:cornerRadius="4dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvperday"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="#8a2be2"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.761"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+        <TextView
+            android:id="@+id/tvpermonth"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="#8a2be2"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.447"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvperday" />
+
+        <TextView
+            android:id="@+id/tvperyear"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/border"
+            android:padding="15dp"
+            android:textAlignment="center"
+            android:textColor="#8a2be2"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.447"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvpermonth" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

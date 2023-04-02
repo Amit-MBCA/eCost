@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="242dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        tools:context=".Profile">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/btn_home"
+                android:layout_width="140dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/topbtnbg"
+                android:onClick="onHome"
+                android:src="@drawable/ic_baseline_home_24"
+                android:text="Home"
+                android:textColor="#0066ff"
+                android:textSize="16sp"
+                app:flow_horizontalAlign="center"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/btn_profile"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="80dp"
+                android:layout_weight="1"
+                android:background="@drawable/topbtnbg"
+                android:onClick="onProfile"
+                android:src="@drawable/user_60"
+                android:text="Profile"
+                android:textColor="#8a2be2"
+                android:textSize="18dp"
+                app:flow_horizontalAlign="center"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:layout_editor_absoluteX="125dp" />
+
+            <ImageButton
+                android:id="@+id/btn_computation"
+                android:layout_width="140dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/topbtnbg"
+                android:onClick="onComputation"
+                android:src="@drawable/comp_60"
+                android:text="Computation"
+                android:textColor="#0066ff"
+                android:textSize="16sp"
+                app:flow_horizontalAlign="center"
+                tools:ignore="OnClick,TextContrastCheck,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <!--    <ImageView-->
+        <!--        android:id="@+id/imageView4"-->
+        <!--        android:layout_width="246dp"-->
+        <!--        android:layout_height="246dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout"-->
+        <!--        app:srcCompat="@drawable/profile_icon_24" />-->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView2"
+            android:layout_width="246dp"
+            android:layout_height="246dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/user_246"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="MissingClass" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/updatedbg"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleImageView2">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/comp_border"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/userNation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="#0066FF"
+                android:textSize="24sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/userState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/border"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="#0066FF"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/saveinfo_bg"
+            android:onClick="updateDetails"
+            android:padding="15dp"
+            android:text="Edit Info"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
